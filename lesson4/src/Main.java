@@ -30,10 +30,71 @@ public class Main {
 
     static void toRight(String text) {
         StringBuilder modifiedText = new StringBuilder(text).reverse();
-       while(modifiedText.length()<197){
-           modifiedText.append(" ");
-       }
+        while (modifiedText.length() < 197) {
+            modifiedText.append(" ");
+        }
         System.out.println(modifiedText.reverse());
+    }
+
+
+    static void BurrowsWheelerTransform(String text) {
+        char[][] words = new char[text.length()][text.length()];
+        char[] textToArray = new char[text.length()];
+        for (int i = 0; i < textToArray.length; i++) {
+            textToArray[i] = text.charAt(i);
+        }
+        for (int i = 0; i < textToArray.length; i++) {
+
+            char[] transformedArray = new char[text.length()];
+
+            transformedArray[transformedArray.length - 1] = textToArray[0];
+
+            for (int j = 0; j < textToArray.length - 1; j++) {
+                transformedArray[j] = textToArray[j + 1];
+            }
+            words[i] = transformedArray;
+
+            textToArray = transformedArray;
+
+            for (int k = 0; k < transformedArray.length; k++) {
+                System.out.print(transformedArray[k]);
+
+            }
+            System.out.println();
+
+
+        }
+//        char[][] sorted = new char[4][4];
+//        char[] min = words[0];
+//        for (int i = 0; i < 4; i++) {
+//            for (int j = 0; j < 4; j++) {
+//                if (words[i][j] < min[j]) {
+//                    min = words[i];
+//                    sorted[i] = min;
+//                }
+//
+//            }
+//
+//        }
+//        System.out.println("!!!!!!!!!!!");
+//        for (int i = 0; i < 4; i++) {
+//            for (int j = 0; j < 4; j++) {
+//                System.out.print(sorted[i][j]);
+//            }
+//            System.out.println();
+//        }
+//        System.out.println();
+//
+
+        System.out.println("last letters:");
+        for (char[] word : words
+                ) {
+
+            System.out.print(word[3]);
+
+        }
+
+
     }
 
 
@@ -43,11 +104,11 @@ public class Main {
         while (sc.hasNext()) {
 
             String str = sc.nextLine();
-           // deleteRepeatableSymbols(str);
+            deleteRepeatableSymbols(str);
             toRight(str);
 
         }
-
+      //  BurrowsWheelerTransform("java");
 
     }
 
