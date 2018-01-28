@@ -1,0 +1,40 @@
+1
+select maker, type  from product order by maker;
+2
+select model, ram, screen, price from laptop where price>1000 order by ram , price desc;
+3.
+select * from printer where color='y' order by price desc;
+4
+select model, speed, hd, cd, price from Pc where (cd='12x' or cd='24x') and price<600 order by speed desc;
+5
+select distinct name, class from ships order by name;
+6
+select * from pc where  speed>=500 and price <800 order by price desc;
+7
+select * from pc where  speed>=500 and price <800 order by price desc;
+8
+select model,
+speed from pc where  price between 400 and 600 order by hd ;
+9
+select product.model, speed, hd from pc join product on pc.model=product.model
+where hd in (10,20) and product.maker='A' order by speed ;
+10
+select model, speed, hd, price from laptop 
+where screen>=12  order by price desc ;
+11
+select model, type,
+price from printer
+where price<300  order by type desc ;
+12
+select model, ram, price from laptop
+where ram=64  order by screen ;
+13
+select model, ram, price from pc
+where ram>64  order by hd ;
+14
+select model, speed, price from pc
+where speed between 500 and 750  order by hd desc;
+15
+select * from outcome_o
+where outcome_o.out >2000   order by date desc;
+16
