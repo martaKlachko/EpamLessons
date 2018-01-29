@@ -91,4 +91,39 @@ where MONTH(date)=3;
 3
 select * from Outcome_o
 where DAY(date)=14;
+4
+select name 
+from Ships 
+where name like 'W%n';
+5
+select name 
+from Ships 
+where name like '%e%e%';
+6
+select name, launched 
+from Ships 
+where name not rlike 'a$';
+7
+select * from  Ships 
+where name like '% %' and name not rlike 'c$';
+8
+select * from Trip 
+where hour(time_out) BETWEEN 12 AND 17;
+9
+SELECT * FROM Trip 
+WHERE hour(time_in )BETWEEN 17 AND 23;
+10
+SELECT date 
+FROM Pass_in_trip 
+WHERE place LIKE '1%';
+11
+SELECT date 
+FROM Pass_in_trip 
+WHERE place LIKE '%c';
+12
+SELECT * FROM Passenger 
+WHERE SUBSTRING_INDEX(name, ' ', -1) LIKE 'C%';
+13
+SELECT * FROM Passenger 
+WHERE SUBSTRING_INDEX(name, ' ', -1) NOT LIKE 'J%';
 
