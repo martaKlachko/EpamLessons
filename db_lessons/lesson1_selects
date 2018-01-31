@@ -127,3 +127,49 @@ WHERE SUBSTRING_INDEX(name, ' ', -1) LIKE 'C%';
 SELECT * FROM Passenger 
 WHERE SUBSTRING_INDEX(name, ' ', -1) NOT LIKE 'J%';
 
+
+3
+1
+select maker, type, speed, hd from product join pc on product.model=pc.model
+where hd<=8;
+2
+select distinct maker from product join pc on product.model=pc.model
+where speed>=600;
+3
+select distinct maker from product join laptop on product.model=laptop.model
+where speed<=500;
+4
+
+
+5
+
+
+
+6
+select pc.model, product.maker from  pc join product on pc.model=product.model
+where pc.price<600;
+7
+select printer.model, product.maker from  printer join product on printer.model=product.model
+where printer.price>300;
+8
+select maker, pc.model, price from  pc join product on pc.model=product.model;
+9
+select maker, pc.model, price from  pc join product on pc.model=product.model;
+
+10
+select maker, type, laptop.model, speed from  laptop join product on laptop.model=product.model
+ where speed>600;
+11
+select classes.displacement from  ships join classes on ships.class=classes.class;
+12
+
+
+13
+select classes.country from  ships join classes on ships.class=classes.class;
+14
+
+
+15
+
+
+
