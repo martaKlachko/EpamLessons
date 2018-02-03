@@ -1,4 +1,5 @@
-1
+4 (Використ підзапитів у конструкції WHERE з викор. IN, ANY,
+ALL)
 
 1
 select distinct maker  from  product
@@ -19,7 +20,7 @@ select  distinct maker  from  product
 5
 
 
-2
+5 (Використання підзапитів з лог. операцією EXISTS)
 1
 select  distinct maker  from  product p
  where exists (select * from pc  where   pc.model=p.model );
@@ -44,3 +45,7 @@ select maker from product p join printer pr on p.model=pr.model
 8
   select distinct  maker from product join pc on product.model=pc.model where product.maker=maker and not exists 
 (select distinct  maker from product join printer pr on product.model=pr.model where product.maker=maker);
+
+6 (Конкатенація стрічок чи мат. обчислення чи робота з датами)
+1
+
