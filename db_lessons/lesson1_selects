@@ -1,0 +1,175 @@
+1
+select maker, type  from product order by maker;
+2
+select model, ram, screen, price from laptop where price>1000 order by ram , price desc;
+3.
+select * from printer where color='y' order by price desc;
+4
+select model, speed, hd, cd, price from Pc where (cd='12x' or cd='24x') and price<600 order by speed desc;
+5
+select distinct name, class from ships order by name;
+6
+select * from pc where  speed>=500 and price <800 order by price desc;
+7
+select * from pc where  speed>=500 and price <800 order by price desc;
+8
+select model,
+speed from pc where  price between 400 and 600 order by hd ;
+9
+select product.model, speed, hd from pc join product on pc.model=product.model
+where hd in (10,20) and product.maker='A' order by speed ;
+10
+select model, speed, hd, price from laptop 
+where screen>=12  order by price desc ;
+11
+select model, type,
+price from printer
+where price<300  order by type desc ;
+12
+select model, ram, price from laptop
+where ram=64  order by screen ;
+13
+select model, ram, price from pc
+where ram>64  order by hd ;
+14
+select model, speed, price from pc
+where speed between 500 and 750  order by hd desc;
+15
+select * from outcome_o
+where outcome_o.out >2000   order by date desc;
+16
+select * from income_o
+where income_o.inc between 5000 and 10000   order by inc;
+17
+select * from income
+where point=1  order by inc;
+18
+select * from outcome
+where point=2  order by outcome.out;
+19
+select * from classes
+where country='Japan'  order by type desc;
+20
+select name, launched from ships
+where launched between 1940 and 1942  order by launched desc;
+21???
+select * from outcomes
+where battle='Guadalcanal' and result='no' order by ship desc;
+22
+select * from outcomes
+where result='no' order by ship desc;
+23
+select class, displacement  fromClasses 
+where displacement>=40000 order by type;
+24
+select trip_no, town_from, town_to 	from Trip 
+where town_from='London' || town_to = 'London' order by time_out;
+25
+select trip_no, plane, town_from, town_to 
+from Trip 
+where plane='TU-154' 
+order by time_out desc;
+26
+select  trip_no, plane, town_from, town_to 
+from Trip 
+where plane!='IL-86' 
+order by plane;
+27
+select trip_no, plane, town_from, town_to 
+from Trip 
+where town_from!='Rostov' and town_to!='Rostov' 
+order by plane;
+
+2
+1
+select model 
+from PC 
+where model like '%1%1%';
+2
+select * from Outcome 
+where MONTH(date)=3;
+3
+select * from Outcome_o
+where DAY(date)=14;
+4
+select name 
+from Ships 
+where name like 'W%n';
+5
+select name 
+from Ships 
+where name like '%e%e%';
+6
+select name, launched 
+from Ships 
+where name not rlike 'a$';
+7
+select * from  Ships 
+where name like '% %' and name not rlike 'c$';
+8
+select * from Trip 
+where hour(time_out) BETWEEN 12 AND 17;
+9
+SELECT * FROM Trip 
+WHERE hour(time_in )BETWEEN 17 AND 23;
+10
+SELECT date 
+FROM Pass_in_trip 
+WHERE place LIKE '1%';
+11
+SELECT date 
+FROM Pass_in_trip 
+WHERE place LIKE '%c';
+12
+SELECT * FROM Passenger 
+WHERE SUBSTRING_INDEX(name, ' ', -1) LIKE 'C%';
+13
+SELECT * FROM Passenger 
+WHERE SUBSTRING_INDEX(name, ' ', -1) NOT LIKE 'J%';
+
+
+3
+1
+select maker, type, speed, hd from product join pc on product.model=pc.model
+where hd<=8;
+2
+select distinct maker from product join pc on product.model=pc.model
+where speed>=600;
+3
+select distinct maker from product join laptop on product.model=laptop.model
+where speed<=500;
+4
+
+
+5
+
+
+
+6
+select pc.model, product.maker from  pc join product on pc.model=product.model
+where pc.price<600;
+7
+select printer.model, product.maker from  printer join product on printer.model=product.model
+where printer.price>300;
+8
+select maker, pc.model, price from  pc join product on pc.model=product.model;
+9
+select maker, pc.model, price from  pc join product on pc.model=product.model;
+
+10
+select maker, type, laptop.model, speed from  laptop join product on laptop.model=product.model
+ where speed>600;
+11
+select classes.displacement from  ships join classes on ships.class=classes.class;
+12
+
+
+13
+select classes.country from  ships join classes on ships.class=classes.class;
+14
+
+
+15
+
+
+
