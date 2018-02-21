@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medicines>
+    <medicine>
+        <name>copacyl</name>
+        <pharm> LTD Farm group</pharm>
+        <group>vitamin</group>
+        <analogs>
+            <medicine>aaa</medicine>
+        </analogs>
+        <versions>
+            <version>2.0</version>
+        </versions>
+        <certificate>
+            <number>455434e3</number>
+            <date>2016-01-12</date>
+            <organization>DFH Farm</organization>
+        </certificate>
+        <package>
+            <type>dff</type>
+            <quantity>21</quantity>
+            <price>232</price>
+        </package>
+        <dosage>
+            <dose>22</dose>
+            <periodity>2</periodity>
+        </dosage>
+    </medicine>
+    <medicine>
+        <name>festal</name>
+        <pharm> LTD Farm group</pharm>
+        <group>vitamin</group>
+        <analogs>
+            <medicine>aaa</medicine>
+        </analogs>
+        <versions>
+            <version>2.0</version>
+        </versions>
+        <certificate>
+            <number>45543343</number>
+            <date>2016-5-12</date>
+            <organization>DFH Farm</organization>
+        </certificate>
+        <package>
+            <type>dff</type>
+            <quantity>21</quantity>
+            <price>232</price>
+        </package>
+        <dosage>
+            <dose>22</dose>
+            <periodity>4</periodity>
+        </dosage>
+    </medicine>
+</medicines>

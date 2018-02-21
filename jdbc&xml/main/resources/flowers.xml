@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="flowers.xsl"?>
+<flowers >
+    <flower  flowerNo="0">
+        <name>rose</name>
+        <soil>simple</soil>
+       <origin>Turkey</origin>
+        <visual_parameters>
+            <color>red</color>
+            <stam>green</stam>
+            <leaf_color>light green</leaf_color>
+            <size>24</size>
+        </visual_parameters>
+        <growing_tips>
+            <temperature>25</temperature>
+            <lighting>true</lighting>
+            <watering>500</watering>
+        </growing_tips>
+        <multiplying>leaves</multiplying>
+    </flower>
+    <flower flowerNo="1">
+        <name>lilly</name>
+        <soil>simple</soil>
+        <origin>Norway</origin>
+        <visual_parameters>
+            <color>white</color>
+            <stam>green</stam>
+            <leaf_color>dark green</leaf_color>
+            <size>34</size>
+        </visual_parameters>
+        <growing_tips>
+            <temperature>15</temperature>
+            <lighting>false</lighting>
+            <watering>300</watering>
+        </growing_tips>
+        <multiplying>leaves</multiplying>
+    </flower>
+
+
+
+</flowers>
